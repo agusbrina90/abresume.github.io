@@ -903,13 +903,35 @@
     <!--=====================================================-->
     <!--configuration template-->
     <script src="assets/theme/js/theme.js"></script>
+    <script>
+      $(document).ready(function () {
+        console.log('=== DEBUGGING SKILLS PROGRESS BARS ===');
+        console.log('jQuery loaded:', typeof $ !== 'undefined');
+        console.log('EasyPieChart loaded:', typeof $.fn.easyPieChart !== 'undefined');
+        console.log('Charts found:', $('.chart').length);
+        console.log('Progress lines found:', $('.progress-line .line').length);
+        console.log('Data-holdwidth elements found:', $('[data-holdwidth]').length);
 
-        <script>
-          $(document).ready(function () {
-            console.log('jQuery loaded:', typeof $ !== 'undefined');
-            console.log('EasyPieChart loaded:', typeof $.fn.easyPieChart !== 'undefined');
-            console.log('Charts found:', $('.chart').length);
-          });
-        </script>
+        // Check if initHold function exists
+        console.log('initHold function exists:', typeof initHold === 'function');
+
+        // Try to manually initialize
+        if (typeof initHold === 'function') {
+          console.log('Manually calling initHold...');
+          initHold();
+        }
+
+        // Check if initEasyChart function exists
+        console.log('initEasyChart function exists:', typeof initEasyChart === 'function');
+
+        // Try to manually initialize charts
+        if (typeof initEasyChart === 'function') {
+          console.log('Manually calling initEasyChart...');
+          initEasyChart();
+        }
+
+        console.log('=== END DEBUG ===');
+      });
+    </script>
   </body>
 </html>
