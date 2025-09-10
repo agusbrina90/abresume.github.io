@@ -164,7 +164,7 @@
   //Typed Animation
   function initTyped() {
     $("#typed").typed({
-      strings: ["A Designer", "A Freelancer", "A Marketer", "A Developer"],
+      strings: ["Project Manager", "UX/IU designer", "A Marketer", "Scrum Master"],
       // typing speed
       typeSpeed: 300,
       // time before typing starts
